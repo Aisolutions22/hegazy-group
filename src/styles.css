@@ -141,17 +141,27 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-arabic: "IBM Plex Sans Arabic", "Noto Kufi Arabic", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  /* Dedicated token for numeric/spec data (spec tables, dimensions, part codes).
+     Uses tabular figures so columns of numbers align. Font-family kept in sync
+     with --font-mono so a single family change flows through both. */
+  --font-mono-data: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
-  /* Fluid type scale (clamp-based) */
-  --text-legal: 0.8125rem; /* 13px — footer legal only */
+  /* Fluid type scale (clamp-based) — every text-* utility must map to one of these */
+  --text-micro: 0.6875rem; /* 11px — eyebrow / micro caps */
+  --text-micro--line-height: 1.4;
+  --text-caption: 0.75rem; /* 12px — small caps / captions */
+  --text-caption--line-height: 1.4;
+  --text-legal: 0.8125rem; /* 13px — footer legal, spec metadata */
   --text-legal--line-height: 1.4;
   --text-small: 0.875rem; /* 14px */
   --text-small--line-height: 1.45;
+  --text-meta: 0.9375rem; /* 15px — nav links, dense body */
+  --text-meta--line-height: 1.5;
   --text-base: 1rem; /* 16px minimum body */
   --text-base--line-height: 1.6;
-  --text-lg: clamp(1.0625rem, 0.9rem + 0.4vw, 1.125rem);
+  --text-lg: clamp(1.0625rem, 0.9rem + 0.4vw, 1.125rem); /* 17→18 */
   --text-lg--line-height: 1.55;
-  --text-xl: clamp(1.125rem, 0.95rem + 0.5vw, 1.25rem);
+  --text-xl: clamp(1.125rem, 0.95rem + 0.5vw, 1.25rem); /* 18→20 */
   --text-xl--line-height: 1.5;
   --text-2xl: clamp(1.375rem, 1.1rem + 0.8vw, 1.625rem);
   --text-2xl--line-height: 1.35;
