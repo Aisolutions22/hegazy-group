@@ -60,20 +60,20 @@ export function SiteFooter() {
           <div className="inline-flex items-center gap-2">
             <span
               aria-hidden="true"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-sm bg-white font-mono text-[13px] font-bold text-graphite-900"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-sm bg-white font-mono text-legal font-bold text-graphite-900"
             >
               H
             </span>
-            <span className="text-[17px] font-semibold tracking-tight">Hegazy Group</span>
+            <span className="text-lg font-semibold tracking-tight">Hegazy Group</span>
           </div>
-          <p className="mt-4 text-[15px] leading-relaxed text-white/70">{t.footer.tagline}</p>
+          <p className="mt-4 text-meta leading-relaxed text-white/70">{t.footer.tagline}</p>
         </div>
 
         {/* Columns */}
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
           {cols.map((c) => (
             <div key={c.heading}>
-              <h3 className="mb-4 font-mono text-[11px] uppercase tracking-widest text-white/60">
+              <h3 className="mb-4 font-mono text-micro uppercase tracking-widest text-white/60">
                 {c.heading}
               </h3>
               <ul className="space-y-2.5">
@@ -81,7 +81,7 @@ export function SiteFooter() {
                   <li key={l.label}>
                     <a
                       href={l.href}
-                      className="text-[14px] text-white/85 hover:text-white"
+                      className="text-small text-white/85 hover:text-white"
                     >
                       {l.label}
                     </a>
@@ -94,7 +94,7 @@ export function SiteFooter() {
 
         {/* Certifications */}
         <div className="mt-14 border-t border-white/10 pt-8">
-          <h3 className="mb-4 font-mono text-[11px] uppercase tracking-widest text-white/60">
+          <h3 className="mb-4 font-mono text-micro uppercase tracking-widest text-white/60">
             {t.footer.certifications}
           </h3>
           <div className="flex flex-wrap gap-3">
@@ -102,7 +102,7 @@ export function SiteFooter() {
               <div
                 key={i}
                 aria-label={`${t.trust.cert} placeholder ${i}`}
-                className="flex h-14 w-24 items-center justify-center rounded-md border border-white/15 bg-white/5 font-mono text-[11px] uppercase tracking-widest text-white/50"
+                className="flex h-14 w-24 items-center justify-center rounded-md border border-white/15 bg-white/5 font-mono text-micro uppercase tracking-widest text-white/50"
               >
                 Cert {i}
               </div>
@@ -113,7 +113,7 @@ export function SiteFooter() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="mx-auto flex w-full max-w-[1280px] flex-col items-start justify-between gap-3 px-6 py-5 text-[13px] text-white/60 md:flex-row md:items-center md:px-8">
+        <div className="mx-auto flex w-full max-w-[1280px] flex-col items-start justify-between gap-3 px-6 py-5 text-legal text-white/60 md:flex-row md:items-center md:px-8">
           <div>
             © {year} Hegazy Group. {t.footer.legal.rights}
           </div>

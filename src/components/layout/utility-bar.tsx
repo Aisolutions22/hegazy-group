@@ -17,7 +17,7 @@ export function UtilityBar({ hidden }: Props) {
         opacity: hidden ? 0 : 1,
       }}
     >
-      <div className="mx-auto flex h-10 w-full max-w-[1280px] items-center gap-6 px-6 text-[13px] md:px-8">
+      <div className="mx-auto flex h-10 w-full max-w-[1280px] items-center gap-6 px-6 text-legal md:px-8">
         <div className="ms-auto flex items-center gap-5">
           <a
             href="tel:+000000000"

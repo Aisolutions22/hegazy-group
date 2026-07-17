@@ -32,7 +32,7 @@ export function MobileNav() {
         <SheetTitle className="sr-only">{t.menu}</SheetTitle>
         <div className="flex h-full flex-col">
           <div className="flex h-16 shrink-0 items-center justify-between border-b border-steel-200 px-6">
-            <span className="font-mono text-[13px] uppercase tracking-widest text-steel-600">
+            <span className="font-mono text-legal uppercase tracking-widest text-steel-600">
               {t.menu}
             </span>
             <button
@@ -48,11 +48,11 @@ export function MobileNav() {
           <nav className="flex-1 overflow-y-auto px-2 py-4">
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="products" className="border-b border-steel-200">
-                <AccordionTrigger className="px-4 text-[16px] font-semibold text-graphite-900 hover:no-underline">
+                <AccordionTrigger className="px-4 text-base font-semibold text-graphite-900 hover:no-underline">
                   {t.nav.products}
                 </AccordionTrigger>
                 <AccordionContent className="px-4 pb-4">
-                  <ul className="space-y-3 text-[15px]">
+                  <ul className="space-y-3 text-meta">
                     <li>
                       <a href="/products/profiles" className="text-steel-600 hover:text-graphite-900">
                         {t.products.profiles}
@@ -81,7 +81,7 @@ export function MobileNav() {
                 <a
                   key={k}
                   href={`/${k}`}
-                  className="flex items-center justify-between border-b border-steel-200 px-4 py-4 text-[16px] font-semibold text-graphite-900 hover:bg-steel-100"
+                  className="flex items-center justify-between border-b border-steel-200 px-4 py-4 text-base font-semibold text-graphite-900 hover:bg-steel-100"
                 >
                   {t.nav[k]}
                   <ChevronDown
@@ -95,14 +95,14 @@ export function MobileNav() {
             <div className="mt-6 space-y-3 px-4">
               <a
                 href="tel:+000000000"
-                className="flex items-center gap-3 text-[15px] text-steel-600 hover:text-graphite-900"
+                className="flex items-center gap-3 text-meta text-steel-600 hover:text-graphite-900"
               >
                 <Phone className="h-4 w-4" aria-hidden="true" />
                 {t.phone}
               </a>
               <a
                 href="https://wa.me/000000000"
-                className="flex items-center gap-3 text-[15px] text-steel-600 hover:text-graphite-900"
+                className="flex items-center gap-3 text-meta text-steel-600 hover:text-graphite-900"
               >
                 <MessageCircle className="h-4 w-4" aria-hidden="true" />
                 {t.whatsapp}
@@ -110,7 +110,7 @@ export function MobileNav() {
               <button
                 type="button"
                 onClick={toggle}
-                className="mt-2 font-mono text-[13px] uppercase tracking-widest text-accent-700"
+                className="mt-2 font-mono text-legal uppercase tracking-widest text-accent-700"
               >
                 {lang === "en" ? "العربية" : "English"}
               </button>

@@ -14,10 +14,10 @@ export function ProductCategoryGrid() {
   return (
     <Section aria-label={t.categories.heading}>
       <div className="mb-12 max-w-2xl">
-        <div className="mb-3 font-mono text-[11px] uppercase tracking-widest text-steel-400">
+        <div className="mb-3 font-mono text-micro uppercase tracking-widest text-steel-400">
           {t.categories.heading}
         </div>
-        <h2 className="text-[clamp(1.75rem,1.2rem+1.8vw,2.5rem)] leading-tight">
+        <h2 className="text-3xl leading-tight">
           {t.categories.subheading}
         </h2>
       </div>
@@ -30,15 +30,15 @@ export function ProductCategoryGrid() {
             className="group flex min-h-[280px] flex-col justify-between bg-white p-6 transition-colors hover:bg-offwhite-50"
           >
             <div>
-              <div className="font-mono text-[12px] text-steel-400" data-spec>
+              <div className="text-caption text-steel-400" data-spec>
                 {it.code}
               </div>
-              <h3 className="mt-4 text-[19px] font-semibold text-graphite-900">
+              <h3 className="mt-4 text-xl font-semibold text-graphite-900">
                 {it.title}
               </h3>
-              <p className="mt-3 text-[14px] leading-relaxed text-steel-600">{it.desc}</p>
+              <p className="mt-3 text-small leading-relaxed text-steel-600">{it.desc}</p>
             </div>
-            <div className="mt-6 inline-flex items-center gap-2 text-[13px] font-semibold text-accent-700 group-hover:text-accent-600">
+            <div className="mt-6 inline-flex items-center gap-2 text-legal font-semibold text-accent-700 group-hover:text-accent-600">
               {t.categories.explore}
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" aria-hidden="true" />
             </div>

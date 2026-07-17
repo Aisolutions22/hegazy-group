@@ -14,7 +14,7 @@ export function TrustStrip() {
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-center lg:grid-cols-[1fr_1fr]">
         {/* Certifications */}
         <div>
-          <div className="mb-4 font-mono text-[11px] uppercase tracking-widest text-steel-400">
+          <div className="mb-4 font-mono text-micro uppercase tracking-widest text-steel-400">
             {t.footer.certifications}
           </div>
           <div className="flex flex-wrap gap-3">
@@ -22,7 +22,7 @@ export function TrustStrip() {
               <div
                 key={i}
                 aria-label={`${t.trust.cert} placeholder ${i}`}
-                className="flex h-16 w-28 items-center justify-center rounded-md border border-steel-200 bg-offwhite-50 font-mono text-[11px] uppercase tracking-widest text-steel-600"
+                className="flex h-16 w-28 items-center justify-center rounded-md border border-steel-200 bg-offwhite-50 font-mono text-micro uppercase tracking-widest text-steel-600"
               >
                 Cert {i}
               </div>
@@ -34,10 +34,10 @@ export function TrustStrip() {
         <div className="grid grid-cols-3 gap-4 border-s-0 border-steel-200 md:border-s md:ps-10">
           {stats.map((s) => (
             <div key={s.label}>
-              <div className="font-mono text-[13px] text-steel-400" data-spec>
+              <div className="text-legal text-steel-400" data-spec>
                 {t.trust.placeholder}
               </div>
-              <div className="mt-2 text-[13px] font-medium leading-snug text-graphite-900">
+              <div className="mt-2 text-legal font-medium leading-snug text-graphite-900">
                 {s.label}
               </div>
             </div>

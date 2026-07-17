@@ -23,22 +23,14 @@ export function HomeHero() {
 
       <div className="mx-auto w-full max-w-[1280px] px-6 pb-20 pt-40 md:px-8 md:pb-28 md:pt-48">
         <div className="max-w-3xl">
-          <div className="mb-6 inline-flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.2em] text-white/70">
+          <div className="mb-6 inline-flex items-center gap-3 font-mono text-caption uppercase tracking-[0.2em] text-white/70">
             <span className="inline-block h-px w-8 bg-white/40" aria-hidden="true" />
             {t.hero.eyebrow}
           </div>
-          <h1
-            className="text-white"
-            style={{
-              fontSize: "clamp(2.25rem, 1.4rem + 3.6vw, 4.25rem)",
-              lineHeight: 1.05,
-              fontWeight: 600,
-              letterSpacing: "-0.02em",
-            }}
-          >
+          <h1 className="text-5xl font-semibold tracking-tight text-white">
             {t.hero.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-[17px] leading-relaxed text-white/80 md:text-[18px]">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
             {t.hero.subtitle}
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-3">

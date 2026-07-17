@@ -8,10 +8,10 @@ export function FinalCta() {
     <section className="w-full bg-graphite-900 text-white" style={{ paddingBlock: "var(--section-py)" }}>
       <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-10 px-6 md:grid-cols-[1.4fr_1fr] md:items-end md:px-8">
         <div>
-          <h2 className="text-[clamp(1.75rem,1.3rem+1.8vw,2.75rem)] leading-tight text-white">
+          <h2 className="text-4xl leading-tight text-white">
             {t.finalCta.title}
           </h2>
-          <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-white/70">
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-white/70">
             {t.finalCta.body}
           </p>
         </div>
@@ -23,10 +23,10 @@ export function FinalCta() {
               <ArrowRight className="h-4 w-4 rtl:rotate-180" aria-hidden="true" />
             </a>
           </Button>
-          <div className="text-[13px] font-mono uppercase tracking-widest text-white/50">
+          <div className="text-legal font-mono uppercase tracking-widest text-white/50">
             {t.finalCta.or}
           </div>
-          <div className="flex flex-wrap items-center gap-5 text-[15px]">
+          <div className="flex flex-wrap items-center gap-5 text-meta">
             <a href="tel:+000000000" className="inline-flex items-center gap-2 text-white/85 hover:text-white">
               <Phone className="h-4 w-4" aria-hidden="true" />
               {t.phone}

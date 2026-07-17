@@ -41,7 +41,7 @@ export function SiteHeader({ variant = "solid" }: Props) {
           <span
             aria-hidden="true"
             className={cn(
-              "inline-flex h-8 w-8 items-center justify-center rounded-sm font-mono text-[13px] font-bold",
+              "inline-flex h-8 w-8 items-center justify-center rounded-sm font-mono text-legal font-bold",
               isTransparent ? "bg-white text-graphite-900" : "bg-graphite-900 text-white"
             )}
           >
@@ -49,7 +49,7 @@ export function SiteHeader({ variant = "solid" }: Props) {
           </span>
           <span
             className={cn(
-              "text-[17px] font-semibold tracking-tight",
+              "text-lg font-semibold tracking-tight",
               isTransparent ? "text-white" : "text-graphite-900"
             )}
           >
@@ -115,7 +115,7 @@ function TransparentNav() {
         <a
           key={i.key}
           href={i.href}
-          className="inline-flex h-9 items-center rounded-md px-3 text-[15px] font-medium text-white/90 hover:bg-white/10 hover:text-white"
+          className="inline-flex h-9 items-center rounded-md px-3 text-meta font-medium text-white/90 hover:bg-white/10 hover:text-white"
         >
           {t.nav[i.key]}
         </a>
