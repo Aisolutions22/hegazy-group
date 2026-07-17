@@ -129,8 +129,11 @@ const en = {
       },
       certifications: "Quality & Certifications",
     },
-  },
-  ar: {
+} as const;
+
+export type Strings = typeof en;
+
+const ar: Strings = {
     skipToContent: "تخطَّ إلى المحتوى",
     phone: "اتصل بنا",
     whatsapp: "واتساب",
