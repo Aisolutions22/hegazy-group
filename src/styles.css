@@ -37,6 +37,11 @@
   /* Section padding (fluid) */
   --section-py: clamp(48px, 8vw, 96px);
 
+  /* 12-col grid */
+  --grid-columns: 12;
+  --grid-gutter: clamp(16px, 2vw, 24px);
+  --grid-max: 1280px;
+
   /* shadcn semantic aliases → brand values */
   --radius: 0.5rem;
   --background: var(--offwhite-50);
