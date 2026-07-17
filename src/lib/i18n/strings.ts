@@ -128,7 +128,7 @@ const en = {
       },
       certifications: "Quality & Certifications",
     },
-} as const;
+};
 
 export type Strings = typeof en;
 
