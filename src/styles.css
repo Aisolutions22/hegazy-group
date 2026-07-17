@@ -200,13 +200,18 @@
     font-family: var(--font-arabic);
   }
 
-  /* Technical / spec numbers */
+  /* Technical / spec numbers — data uses the dedicated mono-data token so
+     spec tables and part codes can be re-skinned independently from prose mono. */
+  [data-spec] {
+    font-family: var(--font-mono-data);
+    font-feature-settings: "tnum", "zero";
+    font-variant-numeric: tabular-nums slashed-zero;
+  }
   .font-mono,
   code,
   kbd,
   samp,
-  pre,
-  [data-spec] {
+  pre {
     font-family: var(--font-mono);
     font-feature-settings: "tnum";
   }
