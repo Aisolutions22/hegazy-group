@@ -38,7 +38,7 @@ export function MegaMenu() {
   const { t } = useLanguage();
 
   return (
-    <NavigationMenu viewport={false} className="hidden lg:flex">
+    <NavigationMenu className="hidden lg:flex">
       <NavigationMenuList className="gap-1">
         <NavigationMenuItem>
           <NavigationMenuTrigger className="bg-transparent text-[15px] font-medium text-graphite-900 hover:bg-steel-100 data-[state=open]:bg-steel-100">
