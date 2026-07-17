@@ -26,8 +26,8 @@ function menuLink({
           href={href}
           className="block rounded-md p-3 transition-colors hover:bg-steel-100 focus-visible:bg-steel-100"
         >
-          <div className="text-[15px] font-semibold text-graphite-900">{title}</div>
-          <p className="mt-1 text-[13px] leading-snug text-steel-600">{desc}</p>
+          <div className="text-meta font-semibold text-graphite-900">{title}</div>
+          <p className="mt-1 text-legal leading-snug text-steel-600">{desc}</p>
         </a>
       </NavigationMenuLink>
     </li>
@@ -41,13 +41,13 @@ export function MegaMenu() {
     <NavigationMenu className="hidden lg:flex">
       <NavigationMenuList className="gap-1">
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent text-[15px] font-medium text-graphite-900 hover:bg-steel-100 data-[state=open]:bg-steel-100">
+          <NavigationMenuTrigger className="bg-transparent text-meta font-medium text-graphite-900 hover:bg-steel-100 data-[state=open]:bg-steel-100">
             {t.nav.products}
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <div className="grid w-[720px] grid-cols-4 gap-6 p-6">
               <div>
-                <div className="mb-3 text-[11px] font-mono uppercase tracking-widest text-steel-400">
+                <div className="mb-3 text-micro font-mono uppercase tracking-widest text-steel-400">
                   {t.products.profiles}
                 </div>
                 <ul className="space-y-1">
@@ -59,7 +59,7 @@ export function MegaMenu() {
                 </ul>
               </div>
               <div>
-                <div className="mb-3 text-[11px] font-mono uppercase tracking-widest text-steel-400">
+                <div className="mb-3 text-micro font-mono uppercase tracking-widest text-steel-400">
                   {t.products.flat}
                 </div>
                 <ul className="space-y-1">
@@ -76,7 +76,7 @@ export function MegaMenu() {
                 </ul>
               </div>
               <div>
-                <div className="mb-3 text-[11px] font-mono uppercase tracking-widest text-steel-400">
+                <div className="mb-3 text-micro font-mono uppercase tracking-widest text-steel-400">
                   {t.products.long}
                 </div>
                 <ul className="space-y-1">
@@ -88,15 +88,15 @@ export function MegaMenu() {
                 </ul>
               </div>
               <div className="rounded-md bg-accent-100 p-4">
-                <div className="mb-2 text-[11px] font-mono uppercase tracking-widest text-accent-700">
+                <div className="mb-2 text-micro font-mono uppercase tracking-widest text-accent-700">
                   {t.products.catalog}
                 </div>
-                <p className="text-[13px] leading-snug text-graphite-800">
+                <p className="text-legal leading-snug text-graphite-800">
                   {t.products.catalogDesc}
                 </p>
                 <a
                   href="/catalog"
-                  className="mt-4 inline-flex items-center gap-2 text-[13px] font-semibold text-accent-700 hover:text-accent-600"
+                  className="mt-4 inline-flex items-center gap-2 text-legal font-semibold text-accent-700 hover:text-accent-600"
                 >
                   <Download className="h-3.5 w-3.5" aria-hidden="true" />
                   {t.products.catalogCta}
@@ -119,7 +119,7 @@ export function MegaMenu() {
             <NavigationMenuLink asChild>
               <Link
                 to={i.href as string}
-                className="inline-flex h-9 items-center rounded-md px-3 text-[15px] font-medium text-graphite-900 transition-colors hover:bg-steel-100"
+                className="inline-flex h-9 items-center rounded-md px-3 text-meta font-medium text-graphite-900 transition-colors hover:bg-steel-100"
               >
                 {t.nav[i.key]}
               </Link>
