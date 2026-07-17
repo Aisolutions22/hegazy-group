@@ -232,3 +232,26 @@
     transform: translateY(0);
   }
 }
+
+/* ============================================================
+ * 12-column grid track — used inside <Section> via <Grid />
+ * Mobile: 4 cols. Tablet: 8. Desktop: 12. Gutter is fluid.
+ * Children position with col-span-* (Tailwind) or inline style.
+ * ============================================================ */
+@utility grid-12 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: var(--grid-gutter);
+  row-gap: var(--grid-gutter);
+}
+@media (min-width: 640px) {
+  .grid-12 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .grid-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
