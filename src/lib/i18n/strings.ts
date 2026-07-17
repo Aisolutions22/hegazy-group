@@ -1,7 +1,6 @@
 export type Lang = "en" | "ar";
 
 const en = {
-  en: {
     skipToContent: "Skip to content",
     phone: "Call us",
     whatsapp: "WhatsApp",
