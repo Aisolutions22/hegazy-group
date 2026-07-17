@@ -1,6 +1,6 @@
 export type Lang = "en" | "ar";
 
-export const strings = {
+const en = {
   en: {
     skipToContent: "Skip to content",
     phone: "Call us",
