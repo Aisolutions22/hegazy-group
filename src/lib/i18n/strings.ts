@@ -259,7 +259,7 @@ const ar: Strings = {
       },
       certifications: "الجودة والشهادات",
     },
-  },
-} as const;
+};
 
-export type Strings = typeof strings.en;
+export const strings: Record<Lang, Strings> = { en, ar };
+
