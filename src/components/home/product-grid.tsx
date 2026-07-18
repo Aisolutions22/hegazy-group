@@ -1,4 +1,4 @@
-import { Section } from "@/components/layout/section";
+import { Section, Grid } from "@/components/layout/section";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { ArrowRight } from "lucide-react";
 
@@ -14,7 +14,7 @@ export function ProductCategoryGrid() {
   return (
     <Section aria-label={t.categories.heading}>
       <div className="mb-12 max-w-2xl">
-        <div className="mb-3 font-mono text-micro uppercase tracking-widest text-steel-400">
+        <div className="mb-3 font-mono text-micro uppercase tracking-caps text-steel-400">
           {t.categories.heading}
         </div>
         <h2 className="text-3xl leading-tight">
@@ -22,12 +22,12 @@ export function ProductCategoryGrid() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 gap-px overflow-hidden rounded-md border border-steel-200 bg-steel-200 sm:grid-cols-2 lg:grid-cols-4">
+      <Grid className="overflow-hidden rounded-md border border-steel-200 bg-steel-200 !gap-px">
         {items.map((it) => (
           <a
             key={it.title}
             href={it.href}
-            className="group flex min-h-[280px] flex-col justify-between bg-white p-6 transition-colors hover:bg-offwhite-50"
+            className="group card-product col-span-4 flex flex-col justify-between bg-white p-6 transition-colors hover:bg-offwhite-50 sm:col-span-4 lg:col-span-3"
           >
             <div>
               <div className="text-caption text-steel-400" data-spec>
@@ -44,7 +44,7 @@ export function ProductCategoryGrid() {
             </div>
           </a>
         ))}
-      </div>
+      </Grid>
     </Section>
   );
 }
