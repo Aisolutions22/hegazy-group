@@ -17,12 +17,18 @@ export const ar: Strings = {
   menu: "القائمة",
   closeMenu: "إغلاق القائمة",
   openMenu: "فتح القائمة",
+  breadcrumbs: {
+    label: "مسار التنقل",
+    home: "الرئيسية",
+  },
   nav: {
     products: "المنتجات",
     industries: "القطاعات",
     projects: "المشاريع",
     resources: "الموارد",
     about: "من نحن",
+    contact: "تواصل معنا",
+    quote: "اطلب عرض سعر",
   },
   products: {
     profiles: "القطاعات المسحوبة",
