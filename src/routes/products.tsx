@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Section, Grid } from "@/components/layout/section";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { MobileStickyQuoteBar } from "@/components/layout/mobile-nav";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { PRODUCTS, FILTER_GROUPS } from "@/lib/catalog/products";
@@ -35,6 +36,7 @@ function ProductsPage() {
     <>
       <SiteHeader variant="solid" />
       <main id="main-content">
+        <Breadcrumbs items={[{ label: t.nav.products }]} />
         <Section as="header" className="bg-graphite-900 text-white" aria-label={t.productsPage.eyebrow}>
           <Grid>
             <div className="col-span-4 sm:col-span-8 lg:col-span-9">
@@ -56,6 +58,9 @@ function ProductsPage() {
               className="col-span-4 sm:col-span-8 lg:col-span-3"
               aria-label={t.productsPage.filters}
             >
+              {/* sr-only heading gives assistive tech a real landmark to jump to;
+                  the visible label is the eyebrow-styled div below. */}
+              <h2 className="sr-only">{t.productsPage.filters}</h2>
               <div className="rounded-md border border-steel-200 bg-white p-6">
                 <div className="mb-4 flex items-baseline justify-between">
                   <div className="font-mono text-micro uppercase tracking-caps text-steel-400">
@@ -82,6 +87,7 @@ function ProductsPage() {
 
             {/* Product grid */}
             <div className="col-span-4 sm:col-span-8 lg:col-span-9">
+              <h2 className="sr-only">{t.productsPage.title}</h2>
               <div className="mb-6 flex items-baseline justify-between">
                 <div className="text-legal text-steel-600" data-spec>
                   {PRODUCTS.length} {t.productsPage.resultsCount}

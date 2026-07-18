@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Section, Grid } from "@/components/layout/section";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 // Sticky mobile CTA intentionally omitted on /quote — this page IS the RFQ
 // surface, so pinning a "Request a Quote" bar on top of the submit button
 // would compete with (and physically overlap) the primary action.
@@ -61,6 +62,7 @@ function QuotePage() {
     <>
       <SiteHeader variant="solid" />
       <main id="main-content">
+        <Breadcrumbs items={[{ label: t.nav.quote }]} />
         <Section
           as="header"
           className="bg-graphite-900 text-white"
@@ -91,6 +93,11 @@ function QuotePage() {
                   <StepIndicator step={form.step} labels={stepLabels} />
 
                   <div className="mt-8">
+                    {/* Per-step h2 landmark. Kept sr-only because the
+                        StepIndicator above already shows the current step
+                        visually — but AT users need a real heading to
+                        anchor navigation. */}
+                    <h2 className="sr-only">{stepLabels[form.step]}</h2>
                     {form.step === 0 && (
                       <StepSpec
                         data={form.data}
