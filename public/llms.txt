@@ -1,0 +1,45 @@
+# Hegazy Group
+
+> Specialist distributor of aluminum profiles, sheets, plates, coils, foils, bars, and rods — sourced from qualified mills and delivered on schedule to construction, manufacturing, marine, and automotive buyers.
+
+Hegazy Group is a business-to-business aluminum supply and distribution company. We do not manufacture; we source finished aluminum products from qualified mills and deliver them against customer specifications. Requests for quotation, product data sheets, and technical specifications are handled through the pages below.
+
+## Pages
+
+- [Home](/): Overview of Hegazy Group's aluminum supply and distribution offer.
+- [About](/about): Company profile, sourcing approach, and distribution footprint.
+- [Products](/products): Full catalog of stocked and on-request aluminum products.
+- [Industries](/industries): Sectors served — construction, manufacturing, marine, automotive.
+- [Projects](/projects): Sample structure for reference case studies.
+- [Resources](/resources): Technical guides, specification references, and buyer documentation.
+- [Locations](/locations): Warehouse and distribution locations.
+- [Contact](/contact): Sales and technical contact channels.
+- [Request a Quote](/quote): Structured RFQ intake for aluminum orders.
+
+## Product categories
+
+- [Profiles](/products/profiles): Extruded and architectural aluminum profiles.
+- [Sheets & Plates](/products/sheets-plates): Mill, marine, and pre-coated aluminum sheet and plate.
+- [Bars & Rods](/products/bars-rods): Round, square, and hex aluminum bar and rod stock.
+- [Coils & Foils](/products/coils-foils): Converter, household, and pre-painted aluminum coil and foil.
+
+## Industries
+
+- [Construction](/industries/construction): Aluminum supply for building envelopes and fit-out.
+- [Manufacturing](/industries/manufacturing): Aluminum inputs for OEM and fabrication.
+- [Marine](/industries/marine): Marine-grade aluminum for hulls and superstructure.
+- [Automotive](/industries/automotive): Aluminum stock for automotive components.
+
+## Resources
+
+- [Specifications](/resources/specs): Alloy, temper, and finish reference sheets.
+- [Guides](/resources/guides): Procurement and application guidance.
+- [FAQ](/faq): Common questions on lead times, documentation, and sourcing.
+
+## Optional
+
+- [Careers](/careers)
+- [Catalog download](/catalog)
+- [Privacy policy](/privacy)
+- [Terms](/terms)
+- [Cookies](/cookies)

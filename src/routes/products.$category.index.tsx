@@ -29,14 +29,21 @@ export const Route = createFileRoute("/products/$category/")({
         ],
       };
     }
+    const title = `${loaderData.categoryLabel} — Products | Hegazy Group`;
+    const desc = `${loaderData.categoryLabel} — stocked aluminum products available on release from Hegazy Group.`;
+    const url = `https://hegazy-group.lovable.app/products/${loaderData.category}`;
     return {
       meta: [
-        { title: `${loaderData.categoryLabel} — Products | Hegazy Group` },
-        {
-          name: "description",
-          content: `${loaderData.categoryLabel} — stocked aluminum products available on release.`,
-        },
+        { title },
+        { name: "description", content: desc },
+        { property: "og:title", content: title },
+        { property: "og:description", content: desc },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "website" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: desc },
       ],
+      links: [{ rel: "canonical", href: url }],
     };
   },
   component: CategoryPage,

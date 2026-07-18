@@ -30,6 +30,10 @@ export function stubRouteOptions(config: StubOptions) {
       meta: [
         { title: config.metaTitle },
         { name: "description", content: config.metaDescription },
+        { property: "og:title", content: config.metaTitle },
+        { property: "og:description", content: config.metaDescription },
+        { name: "twitter:title", content: config.metaTitle },
+        { name: "twitter:description", content: config.metaDescription },
         ...(config.noindex ? [{ name: "robots", content: "noindex" }] : []),
       ],
     }),

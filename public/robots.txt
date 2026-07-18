@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hegazy-group.lovable.app/sitemap.xml
