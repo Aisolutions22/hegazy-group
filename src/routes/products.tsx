@@ -61,7 +61,10 @@ function ProductsPage() {
                   <div className="font-mono text-micro uppercase tracking-caps text-steel-400">
                     {t.productsPage.filters}
                   </div>
-                  <button type="button" className="text-legal text-steel-600 hover:text-graphite-900" disabled>
+                  <button
+                    type="button"
+                    className="text-legal text-steel-600 hover:text-graphite-900"
+                  >
                     {t.productsPage.reset}
                   </button>
                 </div>
@@ -71,7 +74,7 @@ function ProductsPage() {
                   <FilterGroup label={t.productsPage.temper} options={FILTER_GROUPS.temper as unknown as string[]} />
                   <FilterGroup label={t.productsPage.finish} options={FILTER_GROUPS.finish as unknown as string[]} />
                 </div>
-                <Button className="mt-6 w-full" disabled>
+                <Button className="mt-6 w-full">
                   {t.productsPage.apply}
                 </Button>
               </div>
@@ -144,7 +147,6 @@ function FilterGroup({ label, options }: { label: string; options: string[] }) {
           <li key={o} className="flex items-center gap-2 text-legal text-steel-600">
             <input
               type="checkbox"
-              disabled
               aria-label={`${label}: ${o}`}
               className="h-3.5 w-3.5 rounded-sm border-steel-200"
             />

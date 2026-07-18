@@ -178,7 +178,7 @@ export const en = {
   },
   industriesPage: {
     eyebrow: "Industries",
-    title: "Aluminum supply for demanding industries.",
+    title: "Sector-matched aluminum for contractors, fabricators, and OEMs.",
     lead: "We supply contractors, fabricators, and OEMs across four core sectors — each with its own alloy, temper, and finish requirements.",
     applications: "Typical applications",
     commonForms: "Common forms",
@@ -241,6 +241,12 @@ export const en = {
     location: "Location",
     scope: "Scope supplied",
     placeholder: "[CLIENT-INPUT-REQUIRED]",
+    sampleBanner: "Sample structure — pending real project details.",
+    sampleBannerBody:
+      "The layout below shows how each supplied project will appear once client names, photography, and figures are approved for release.",
+    sampleImage: "Project photograph pending",
+    sampleTitle: "Project name pending",
+    sampleScope: "Aluminum forms, alloys, and finishes supplied — details pending.",
   },
   common: {
     comingSoon: "Coming soon",

@@ -2,7 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Section, Grid } from "@/components/layout/section";
-import { MobileStickyQuoteBar } from "@/components/layout/mobile-nav";
+// Sticky mobile CTA intentionally omitted on /quote — this page IS the RFQ
+// surface, so pinning a "Request a Quote" bar on top of the submit button
+// would compete with (and physically overlap) the primary action.
 import { useLanguage } from "@/lib/i18n/language-context";
 import { Button } from "@/components/ui/button";
 import { StepIndicator } from "@/components/rfq/step-indicator";
@@ -199,7 +201,6 @@ function QuotePage() {
           </Grid>
         </Section>
       </main>
-      <MobileStickyQuoteBar />
       <SiteFooter />
     </>
   );
