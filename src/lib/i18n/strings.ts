@@ -328,6 +328,7 @@ const en = {
       submitting: "Submitting…",
       required: "This field is required",
       invalidEmail: "Please enter a valid email address",
+      submitError: "We couldn't send your request. Please try again in a moment.",
       // Success
       successTitle: "Request received",
       successBody: "Thank you. Our team will review your specifications and respond within one business day.",
