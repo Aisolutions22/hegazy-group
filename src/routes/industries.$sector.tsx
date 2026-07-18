@@ -50,12 +50,13 @@ function cap(s: string) {
 }
 
 function SectorPage() {
-  const { sector } = Route.useLoaderData();
+  const { sector } = Route.useLoaderData() as { sector: Sector };
   const { t } = useLanguage();
   const Icon = ICONS[sector];
   const data = t.industriesPage[sector];
   const title = t.industries[sector];
-  const desc = t.industries[`${sector}Desc` as const];
+  const descKey = `${sector}Desc` as const;
+  const desc = t.industries[descKey];
 
   return (
     <>
