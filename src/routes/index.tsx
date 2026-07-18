@@ -28,7 +28,6 @@ function Index() {
         <FinalCta />
       </main>
       <SiteFooter />
-      <MobileStickyQuoteBar />
     </>
   );
 }
