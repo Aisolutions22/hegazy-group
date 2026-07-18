@@ -1,4 +1,5 @@
 import { useLanguage } from "@/lib/i18n/language-context";
+import { Section } from "@/components/layout/section";
 
 export function SiteFooter() {
   const { t } = useLanguage();
