@@ -11,13 +11,14 @@ export function UtilityBar({ hidden }: Props) {
   return (
     <div
       aria-hidden={hidden}
-      className="w-full border-b border-graphite-800/40 bg-graphite-900 text-white transition-all duration-200 ease-out overflow-hidden"
+      className="w-full overflow-hidden border-b border-graphite-800/40 bg-graphite-900 text-white transition-[height,opacity] duration-200 ease-out"
       style={{
-        maxHeight: hidden ? 0 : "3rem",
+        height: hidden ? 0 : "2.5rem",
         opacity: hidden ? 0 : 1,
       }}
     >
       <div className="mx-auto flex h-10 w-full max-w-[1280px] items-center gap-6 px-6 text-legal md:px-8">
+
         <div className="ms-auto flex items-center gap-5">
           <a
             href="tel:+000000000"
