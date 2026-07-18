@@ -37,9 +37,13 @@ const en = {
     },
     industries: {
       construction: "Construction & Facade",
+      constructionDesc: "Curtain wall, cladding, and structural profiles for the built environment.",
       manufacturing: "Industrial Manufacturing",
+      manufacturingDesc: "Sheet, coil, and bar stock for OEMs and fabricators.",
       marine: "Marine",
+      marineDesc: "Corrosion-resistant alloys for shipyards and offshore work.",
       automotive: "Automotive & Transport",
+      automotiveDesc: "Lightweighting materials for automotive and rail supply chains.",
     },
     hero: {
       eyebrow: "Aluminum Supply & Distribution",
