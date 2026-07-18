@@ -37,9 +37,13 @@ const en = {
     },
     industries: {
       construction: "Construction & Facade",
+      constructionDesc: "Curtain wall, cladding, and structural profiles for the built environment.",
       manufacturing: "Industrial Manufacturing",
+      manufacturingDesc: "Sheet, coil, and bar stock for OEMs and fabricators.",
       marine: "Marine",
+      marineDesc: "Corrosion-resistant alloys for shipyards and offshore work.",
       automotive: "Automotive & Transport",
+      automotiveDesc: "Lightweighting materials for automotive and rail supply chains.",
     },
     hero: {
       eyebrow: "Aluminum Supply & Distribution",
@@ -169,9 +173,13 @@ const ar: Strings = {
     },
     industries: {
       construction: "البناء والواجهات",
+      constructionDesc: "قطاعات للواجهات والكسوة والهياكل في البيئة العمرانية.",
       manufacturing: "التصنيع الصناعي",
+      manufacturingDesc: "ألواح ولفائف وقضبان لمصنّعي المعدات الأصلية والورش.",
       marine: "البحرية",
+      marineDesc: "سبائك مقاومة للتآكل للأحواض والأعمال البحرية.",
       automotive: "السيارات والنقل",
+      automotiveDesc: "مواد خفيفة الوزن لسلاسل توريد السيارات والسكك.",
     },
     hero: {
       eyebrow: "توريد وتوزيع الألومنيوم",

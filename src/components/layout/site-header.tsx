@@ -57,18 +57,11 @@ export function SiteHeader({ variant = "solid" }: Props) {
           </span>
         </Link>
 
-        {/* Center nav */}
-        <div className={cn("mx-auto", isTransparent && "hidden lg:hidden")}>
-          <div className={cn(isTransparent ? "invisible" : "")}>
-            <MegaMenu />
-          </div>
+        {/* Center nav — same mega-menu component in both header states,
+            re-skinned via variant. Panels always render on a solid surface. */}
+        <div className="mx-auto">
+          <MegaMenu variant={isTransparent ? "transparent" : "solid"} />
         </div>
-
-        {isTransparent && (
-          <div className="mx-auto hidden lg:flex">
-            <TransparentNav />
-          </div>
-        )}
 
         {/* End actions */}
         <div className="ms-auto flex items-center gap-2">
@@ -97,29 +90,5 @@ export function SiteHeader({ variant = "solid" }: Props) {
         </div>
       </div>
     </header>
-  );
-}
-
-function TransparentNav() {
-  const { t } = useLanguage();
-  const items = [
-    { key: "products", href: "/products" },
-    { key: "industries", href: "/industries" },
-    { key: "projects", href: "/projects" },
-    { key: "resources", href: "/resources" },
-    { key: "about", href: "/about" },
-  ] as const;
-  return (
-    <nav className="flex items-center gap-1">
-      {items.map((i) => (
-        <a
-          key={i.key}
-          href={i.href}
-          className="inline-flex h-9 items-center rounded-md px-3 text-meta font-medium text-white/90 hover:bg-white/10 hover:text-white"
-        >
-          {t.nav[i.key]}
-        </a>
-      ))}
-    </nav>
   );
 }
