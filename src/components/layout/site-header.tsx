@@ -46,15 +46,17 @@ export function SiteHeader({ variant = "solid" }: Props) {
             image's natural aspect ratio is preserved. No zoom, no focal
             adjustment. The image already contains the "Hegazy Group"
             wordmark, so no adjacent text span is rendered. */}
-        <Link to="/" className="inline-flex items-center" aria-label="Hegazy Group — Home">
+        <Link to="/" className="inline-flex items-center gap-3" aria-label="Hegazy Group — Home">
           <img
             src={hegazyLogo}
-            alt="Hegazy Group"
+            alt=""
+            aria-hidden="true"
             className={cn(
               "h-10 w-auto object-contain",
               isTransparent && "brightness-0 invert"
             )}
           />
+          <span className="font-semibold tracking-tight text-body">Hegazy Group</span>
         </Link>
 
         {/* Center nav — same mega-menu component in both header states,
