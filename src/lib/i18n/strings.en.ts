@@ -16,12 +16,18 @@ export const en = {
   menu: "Menu",
   closeMenu: "Close menu",
   openMenu: "Open menu",
+  breadcrumbs: {
+    label: "Breadcrumb",
+    home: "Home",
+  },
   nav: {
     products: "Products",
     industries: "Industries",
     projects: "Projects",
     resources: "Resources",
     about: "About",
+    contact: "Contact",
+    quote: "Request a Quote",
   },
   products: {
     profiles: "Profiles",
