@@ -14,7 +14,156 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      products: {
+        Row: {
+          alloy: string
+          availability: string
+          category: string
+          category_label: string
+          code: string
+          created_at: string
+          description: string | null
+          finish: string
+          form: string
+          id: string
+          image_url: string | null
+          name: string
+          price_on_request: boolean
+          published: boolean
+          slug: string
+          sort_order: number
+          standards: string[] | null
+          temper: string
+          updated_at: string
+        }
+        Insert: {
+          alloy: string
+          availability?: string
+          category: string
+          category_label: string
+          code: string
+          created_at?: string
+          description?: string | null
+          finish: string
+          form: string
+          id?: string
+          image_url?: string | null
+          name: string
+          price_on_request?: boolean
+          published?: boolean
+          slug: string
+          sort_order?: number
+          standards?: string[] | null
+          temper: string
+          updated_at?: string
+        }
+        Update: {
+          alloy?: string
+          availability?: string
+          category?: string
+          category_label?: string
+          code?: string
+          created_at?: string
+          description?: string | null
+          finish?: string
+          form?: string
+          id?: string
+          image_url?: string | null
+          name?: string
+          price_on_request?: boolean
+          published?: boolean
+          slug?: string
+          sort_order?: number
+          standards?: string[] | null
+          temper?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      rfq_submissions: {
+        Row: {
+          alloy: string | null
+          category: string | null
+          company: string
+          contact_name: string
+          country: string | null
+          created_at: string
+          destination: string | null
+          dimensions: string | null
+          email: string
+          finish: string | null
+          form: string | null
+          id: string
+          ip_hash: string | null
+          locale: string | null
+          phone: string | null
+          product: string | null
+          quantity: number | null
+          reference: string
+          role: string | null
+          status: string
+          temper: string | null
+          timeline: string | null
+          unit: string | null
+          use_case: string | null
+          user_agent: string | null
+        }
+        Insert: {
+          alloy?: string | null
+          category?: string | null
+          company: string
+          contact_name: string
+          country?: string | null
+          created_at?: string
+          destination?: string | null
+          dimensions?: string | null
+          email: string
+          finish?: string | null
+          form?: string | null
+          id?: string
+          ip_hash?: string | null
+          locale?: string | null
+          phone?: string | null
+          product?: string | null
+          quantity?: number | null
+          reference: string
+          role?: string | null
+          status?: string
+          temper?: string | null
+          timeline?: string | null
+          unit?: string | null
+          use_case?: string | null
+          user_agent?: string | null
+        }
+        Update: {
+          alloy?: string | null
+          category?: string | null
+          company?: string
+          contact_name?: string
+          country?: string | null
+          created_at?: string
+          destination?: string | null
+          dimensions?: string | null
+          email?: string
+          finish?: string | null
+          form?: string | null
+          id?: string
+          ip_hash?: string | null
+          locale?: string | null
+          phone?: string | null
+          product?: string | null
+          quantity?: number | null
+          reference?: string
+          role?: string | null
+          status?: string
+          temper?: string | null
+          timeline?: string | null
+          unit?: string | null
+          use_case?: string | null
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
