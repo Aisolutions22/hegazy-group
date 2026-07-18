@@ -9,7 +9,19 @@ export type ProductSummary = {
   temper: string;
   finish: string;
   availability: "in-stock" | "on-request";
+  /** Absolute or /assets URL. Optional — cards fall back to a neutral tile. */
+  imageUrl?: string;
+  /** Optional short marketing/spec note (dimensions, use case). */
+  description?: string;
+  /** Optional standard-compliance codes (EN, ASTM, etc.). */
+  standards?: string[];
+  /**
+   * All commercial pricing is quote-only. This flag lets the UI render an
+   * explicit "Price on request" chip on cards / detail pages when useful.
+   */
+  priceOnRequest?: boolean;
 };
+
 
 /**
  * Placeholder catalog — structure only. Every product row is representative;
