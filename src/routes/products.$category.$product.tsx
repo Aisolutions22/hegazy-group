@@ -154,7 +154,7 @@ function ProductDetailPage() {
               {t.productDetail.related}
             </div>
             <Grid>
-              {related.map((r) => (
+              {related.map((r: ProductSummary) => (
                 <Link
                   key={r.slug}
                   to="/products/$category/$product"
