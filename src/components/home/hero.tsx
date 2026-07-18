@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-warehouse.jpg";
+import { Section } from "@/components/layout/section";
 
 export function HomeHero() {
   const { t } = useLanguage();
@@ -16,12 +17,21 @@ export function HomeHero() {
         decoding="async"
         className="absolute inset-0 -z-10 h-full w-full object-cover opacity-70"
       />
+      {/* Single scrim — committed */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-linear-to-t from-graphite-900 via-graphite-900/70 to-graphite-900/40"
+        className="absolute inset-0 -z-10 bg-linear-to-t from-graphite-900 via-graphite-900/60 to-graphite-900/10"
       />
 
-      <div className="mx-auto w-full max-w-[1280px] px-6 pb-20 pt-40 md:px-8 md:pb-28 md:pt-48">
+      {/* Section owns --section-py; header clearance is a separate block-start offset. */}
+      <Section
+        as="div"
+        className="w-full"
+        style={{
+          paddingBlockStart: "calc(var(--section-py) + 2.5rem + 5rem)",
+          paddingBlockEnd: "var(--section-py)",
+        }}
+      >
         <div className="max-w-3xl">
           <div className="mb-6 inline-flex items-center gap-3 font-mono text-caption uppercase tracking-[0.2em] text-white/70">
             <span className="inline-block h-px w-8 bg-white/40" aria-hidden="true" />
@@ -50,7 +60,7 @@ export function HomeHero() {
             </Button>
           </div>
         </div>
-      </div>
+      </Section>
     </section>
   );
 }
