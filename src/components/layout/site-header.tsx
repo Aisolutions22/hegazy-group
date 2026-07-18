@@ -67,18 +67,11 @@ export function SiteHeader({ variant = "solid" }: Props) {
           <MegaMenu variant={isTransparent ? "transparent" : "solid"} />
         </div>
 
-        {/* End actions */}
+        {/* End actions — site-wide search intentionally omitted for now.
+            A real search surface is worth building once product and resource
+            content is dense enough to justify it; a decorative icon that
+            didn't do anything read as broken in QA. */}
         <div className="ms-auto flex items-center gap-2">
-          <button
-            type="button"
-            aria-label={t.search}
-            className={cn(
-              "hidden h-10 w-10 items-center justify-center rounded-md transition-colors lg:inline-flex",
-              isTransparent ? "hover:bg-white/10" : "hover:bg-steel-100"
-            )}
-          >
-            <Search className="h-5 w-5" aria-hidden="true" />
-          </button>
           <Button
             asChild
             size="default"
