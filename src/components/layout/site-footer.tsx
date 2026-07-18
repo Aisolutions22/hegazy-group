@@ -1,5 +1,6 @@
 import { useLanguage } from "@/lib/i18n/language-context";
 import { Section } from "@/components/layout/section";
+import hegazyMark from "@/assets/hegazy-mark.png";
 
 export function SiteFooter() {
   const { t } = useLanguage();
@@ -60,12 +61,14 @@ export function SiteFooter() {
         {/* Brand + tagline */}
         <div className="mb-12 max-w-2xl">
           <div className="inline-flex items-center gap-2">
-            <span
+            <img
+              src={hegazyMark}
+              alt=""
               aria-hidden="true"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-sm bg-white font-mono text-legal font-bold text-graphite-900"
-            >
-              H
-            </span>
+              width={32}
+              height={32}
+              className="h-8 w-8 shrink-0 object-contain brightness-0 invert"
+            />
             <span className="text-lg font-semibold tracking-tight">Hegazy Group</span>
           </div>
           <p className="mt-4 text-meta leading-relaxed text-white/70">{t.footer.tagline}</p>

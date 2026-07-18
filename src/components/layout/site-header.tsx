@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import hegazyMark from "@/assets/hegazy-mark.png";
 // Search icon removed — see comment on the end-actions block below.
 import { Button } from "@/components/ui/button";
 import { UtilityBar } from "./utility-bar";
@@ -41,16 +42,18 @@ export function SiteHeader({ variant = "solid" }: Props) {
         )}
       >
         {/* Logo */}
-        <Link to="/" className="inline-flex items-center gap-2">
-          <span
+        <Link to="/" className="inline-flex items-center gap-2" aria-label="Hegazy Group — Home">
+          <img
+            src={hegazyMark}
+            alt=""
             aria-hidden="true"
+            width={32}
+            height={32}
             className={cn(
-              "inline-flex h-8 w-8 items-center justify-center rounded-sm font-mono text-legal font-bold",
-              isTransparent ? "bg-white text-graphite-900" : "bg-graphite-900 text-white"
+              "h-8 w-8 shrink-0 object-contain",
+              isTransparent && "brightness-0 invert"
             )}
-          >
-            H
-          </span>
+          />
           <span
             className={cn(
               "text-lg font-semibold tracking-tight",
