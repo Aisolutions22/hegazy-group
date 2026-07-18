@@ -303,3 +303,17 @@
 }
 
 
+
+/* Hero directional scrim — mirror horizontally under RTL so the opaque
+   side stays under the (start-aligned) text column, and flip the image
+   crop bias so the coils sit next to the text on the correct side. */
+[dir="rtl"] [data-scrim="directional"] {
+  transform: scaleX(-1);
+}
+[dir="rtl"] img[data-hero-img] {
+  object-position: 30% 65%;
+}
+
+
+
+
