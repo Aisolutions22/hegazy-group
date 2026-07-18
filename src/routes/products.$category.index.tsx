@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import type { ProductSummary } from "@/lib/catalog/products";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Section, Grid } from "@/components/layout/section";
@@ -43,7 +44,11 @@ export const Route = createFileRoute("/products/$category/")({
 });
 
 function CategoryPage() {
-  const { category, categoryLabel, items } = Route.useLoaderData();
+  const { category, categoryLabel, items } = Route.useLoaderData() as {
+    category: string;
+    categoryLabel: string;
+    items: ProductSummary[];
+  };
   const { t } = useLanguage();
 
   return (
