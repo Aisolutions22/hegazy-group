@@ -155,6 +155,24 @@ const en = {
         { label: "Team size", value: "[CLIENT-INPUT-REQUIRED]" },
       ],
     },
+    productsPage: {
+      eyebrow: "Product Catalog",
+      title: "Aluminum products stocked for release.",
+      lead: "Filter by form, alloy family, temper, and finish. Stock is indicative — availability confirmed on quotation.",
+      filters: "Filters",
+      form: "Form",
+      alloy: "Alloy family",
+      temper: "Temper",
+      finish: "Finish",
+      apply: "Apply",
+      reset: "Reset",
+      resultsCount: "products",
+      loadMore: "Load more",
+      viewProduct: "View product",
+      availability: "Availability",
+      inStock: "In stock",
+      onRequest: "On request",
+    },
 };
 
 
