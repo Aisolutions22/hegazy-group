@@ -310,9 +310,10 @@
 [dir="rtl"] [data-scrim="directional"] {
   transform: scaleX(-1);
 }
-[dir="rtl"] section > picture > img.\[object-position\:70\%_65\%\] {
+[dir="rtl"] img[data-hero-img] {
   object-position: 30% 65%;
 }
+
 
 
 
