@@ -7,7 +7,9 @@ import { ProductCategoryGrid } from "@/components/home/product-grid";
 import { IndustriesGrid } from "@/components/home/industries-grid";
 import { WhyHegazy } from "@/components/home/why-hegazy";
 import { FinalCta } from "@/components/home/final-cta";
-import { MobileStickyQuoteBar } from "@/components/layout/mobile-nav";
+// Homepage intentionally omits the sticky mobile CTA — hero's own "Request a
+// Quote" button is above the fold, and stacking a second CTA would compete.
+
 
 export const Route = createFileRoute("/")({
   component: Index,
