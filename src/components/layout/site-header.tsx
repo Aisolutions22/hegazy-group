@@ -31,7 +31,7 @@ export function SiteHeader({ variant = "solid" }: Props) {
           : "border-b border-steel-200 bg-white/95 text-graphite-900 backdrop-blur"
       )}
     >
-      <UtilityBar hidden={utilityHidden} />
+      <UtilityBar />
 
 
       <div
