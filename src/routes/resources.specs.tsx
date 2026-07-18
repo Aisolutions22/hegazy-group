@@ -1,18 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageStub } from "@/components/layout/page-stub";
-import { useLanguage } from "@/lib/i18n/language-context";
+import { stubRouteOptions } from "@/lib/routes/stub-route";
 
-export const Route = createFileRoute("/resources/specs")({
-  head: () => ({
-    meta: [
-      { title: "Technical Specifications — Hegazy Group" },
-      { name: "description", content: "Mechanical properties, tolerances, and standards references by alloy family." },
-    ],
+export const Route = createFileRoute("/resources/specs")(
+  stubRouteOptions({
+    metaTitle: "Technical Specifications — Hegazy Group",
+    metaDescription:
+      "Mechanical properties, tolerances, and standards references by alloy family.",
+    copy: (t) => ({
+      eyebrow: t.footer.resources.specs,
+      title: t.resourcesPage.specs.title,
+      body: t.resourcesPage.specs.body,
+    }),
   }),
-  component: SpecsPage,
-});
-
-function SpecsPage() {
-  const { t } = useLanguage();
-  return <PageStub eyebrow={t.footer.resources.specs} title={t.resourcesPage.specs.title} body={t.resourcesPage.specs.body} />;
-}
+);

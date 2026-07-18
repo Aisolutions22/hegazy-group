@@ -1,19 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageStub } from "@/components/layout/page-stub";
-import { useLanguage } from "@/lib/i18n/language-context";
+import { stubRouteOptions } from "@/lib/routes/stub-route";
 
-export const Route = createFileRoute("/terms")({
-  head: () => ({
-    meta: [
-      { title: "Terms — Hegazy Group" },
-      { name: "description", content: "Terms of use." },
-      { name: "robots", content: "noindex" },
-    ],
+export const Route = createFileRoute("/terms")(
+  stubRouteOptions({
+    metaTitle: "Terms — Hegazy Group",
+    metaDescription: "Terms of use.",
+    noindex: true,
+    copy: (t) => ({
+      eyebrow: t.footer.legal.terms,
+      title: t.footer.legal.terms,
+    }),
   }),
-  component: TermsPage,
-});
-
-function TermsPage() {
-  const { t } = useLanguage();
-  return <PageStub eyebrow={t.footer.legal.terms} title={t.footer.legal.terms} />;
-}
+);

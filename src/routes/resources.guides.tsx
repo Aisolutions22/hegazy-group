@@ -1,18 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageStub } from "@/components/layout/page-stub";
-import { useLanguage } from "@/lib/i18n/language-context";
+import { stubRouteOptions } from "@/lib/routes/stub-route";
 
-export const Route = createFileRoute("/resources/guides")({
-  head: () => ({
-    meta: [
-      { title: "Selection Guides — Hegazy Group" },
-      { name: "description", content: "Application-driven guidance on alloy, temper, and finish selection." },
-    ],
+export const Route = createFileRoute("/resources/guides")(
+  stubRouteOptions({
+    metaTitle: "Selection Guides — Hegazy Group",
+    metaDescription:
+      "Application-driven guidance on alloy, temper, and finish selection.",
+    copy: (t) => ({
+      eyebrow: t.footer.resources.guides,
+      title: t.resourcesPage.guides.title,
+      body: t.resourcesPage.guides.body,
+    }),
   }),
-  component: GuidesPage,
-});
-
-function GuidesPage() {
-  const { t } = useLanguage();
-  return <PageStub eyebrow={t.footer.resources.guides} title={t.resourcesPage.guides.title} body={t.resourcesPage.guides.body} />;
-}
+);
