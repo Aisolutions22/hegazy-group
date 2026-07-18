@@ -298,8 +298,16 @@
 @utility card-industry {
   min-height: var(--card-min-industry);
 }
-@utility card-product {
-  min-height: var(--card-min-product);
+
+/* Hero directional scrim — mirror horizontally under RTL so the opaque
+   side stays under the (start-aligned) text column, and flip the image
+   crop bias so the coils sit next to the text on the correct side. */
+[dir="rtl"] [data-scrim="directional"] {
+  transform: scaleX(-1);
 }
+[dir="rtl"] section > picture > img.\[object-position\:70\%_65\%\] {
+  object-position: 30% 65%;
+}
+
 
 
