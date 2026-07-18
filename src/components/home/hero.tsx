@@ -15,12 +15,17 @@ export function HomeHero() {
         height={1080}
         fetchPriority="high"
         decoding="async"
-        className="absolute inset-0 -z-10 h-full w-full object-cover opacity-70"
+        className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
-      {/* Single scrim — committed */}
+      {/* Single scrim — one gradient from opaque graphite at the base to a
+          near-transparent scrim at the top. No stacked image-opacity darkening. */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-linear-to-t from-graphite-900 via-graphite-900/60 to-graphite-900/10"
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(20,24,28,0.88) 0%, rgba(20,24,28,0.72) 45%, rgba(20,24,28,0.35) 100%)",
+        }}
       />
 
       {/* Section owns --section-py; header clearance is a separate block-start offset. */}
