@@ -132,7 +132,31 @@ const en = {
       },
       certifications: "Quality & Certifications",
     },
+    about: {
+      eyebrow: "About Hegazy Group",
+      title: "A specialist distributor built around reliable aluminum supply.",
+      lead: "Hegazy Group sources aluminum profiles, sheets, coils, and bars from qualified mills and delivers them on schedule to contractors, fabricators, and OEMs across the region.",
+      profileHeading: "Company Profile",
+      profileBody: "[CLIENT-INPUT-REQUIRED] — Company narrative describing founding, distribution footprint, and market focus. Kept factual; no manufacturing claims.",
+      capabilitiesHeading: "What we do",
+      capabilities: [
+        { title: "Sourcing", body: "Consolidated purchasing from qualified aluminum mills across grades and formats." },
+        { title: "Stocking", body: "Regional inventory of common alloys, tempers, and dimensions ready for release." },
+        { title: "Technical service", body: "Alloy selection, tolerance review, and fabrication guidance for specifying teams." },
+        { title: "Logistics", body: "Multi-hub fulfillment and export documentation aligned to project schedules." },
+      ],
+      leadershipHeading: "Leadership",
+      leadershipBody: "[CLIENT-INPUT-REQUIRED] — Executive roster and biographies.",
+      factsHeading: "At a glance",
+      facts: [
+        { label: "Founded", value: "[CLIENT-INPUT-REQUIRED]" },
+        { label: "Headquarters", value: "[CLIENT-INPUT-REQUIRED]" },
+        { label: "Fulfillment hubs", value: "[CLIENT-INPUT-REQUIRED]" },
+        { label: "Team size", value: "[CLIENT-INPUT-REQUIRED]" },
+      ],
+    },
 };
+
 
 export type Strings = typeof en;
 
