@@ -132,7 +132,31 @@ const en = {
       },
       certifications: "Quality & Certifications",
     },
+    about: {
+      eyebrow: "About Hegazy Group",
+      title: "A specialist distributor built around reliable aluminum supply.",
+      lead: "Hegazy Group sources aluminum profiles, sheets, coils, and bars from qualified mills and delivers them on schedule to contractors, fabricators, and OEMs across the region.",
+      profileHeading: "Company Profile",
+      profileBody: "[CLIENT-INPUT-REQUIRED] — Company narrative describing founding, distribution footprint, and market focus. Kept factual; no manufacturing claims.",
+      capabilitiesHeading: "What we do",
+      capabilities: [
+        { title: "Sourcing", body: "Consolidated purchasing from qualified aluminum mills across grades and formats." },
+        { title: "Stocking", body: "Regional inventory of common alloys, tempers, and dimensions ready for release." },
+        { title: "Technical service", body: "Alloy selection, tolerance review, and fabrication guidance for specifying teams." },
+        { title: "Logistics", body: "Multi-hub fulfillment and export documentation aligned to project schedules." },
+      ],
+      leadershipHeading: "Leadership",
+      leadershipBody: "[CLIENT-INPUT-REQUIRED] — Executive roster and biographies.",
+      factsHeading: "At a glance",
+      facts: [
+        { label: "Founded", value: "[CLIENT-INPUT-REQUIRED]" },
+        { label: "Headquarters", value: "[CLIENT-INPUT-REQUIRED]" },
+        { label: "Fulfillment hubs", value: "[CLIENT-INPUT-REQUIRED]" },
+        { label: "Team size", value: "[CLIENT-INPUT-REQUIRED]" },
+      ],
+    },
 };
+
 
 export type Strings = typeof en;
 
@@ -267,7 +291,31 @@ const ar: Strings = {
       },
       certifications: "الجودة والشهادات",
     },
+    about: {
+      eyebrow: "عن مجموعة حجازي",
+      title: "موزّع متخصص مبني على توريد ألومنيوم موثوق.",
+      lead: "تورّد مجموعة حجازي قطاعات الألومنيوم والألواح واللفائف والقضبان من مصانع مؤهلة، وتسلّمها في الموعد للمقاولين والمصنّعين ومصنّعي المعدات الأصلية في المنطقة.",
+      profileHeading: "الملف التعريفي",
+      profileBody: "[بيانات العميل مطلوبة] — سرد الشركة يشمل التأسيس وشبكة التوزيع وتركيز السوق. بدون أي ادعاء تصنيعي.",
+      capabilitiesHeading: "ما نقوم به",
+      capabilities: [
+        { title: "التوريد", body: "مشتريات موحّدة من مصانع ألومنيوم مؤهلة عبر الدرجات والأشكال." },
+        { title: "التخزين", body: "مخزون إقليمي من السبائك والأصلاب والأبعاد الشائعة جاهز للتسليم." },
+        { title: "الدعم الفني", body: "اختيار السبيكة ومراجعة التفاوتات وإرشاد التصنيع للفرق المصمّمة." },
+        { title: "اللوجستيات", body: "تنفيذ متعدد المراكز ومستندات تصدير متوافقة مع مواعيد المشاريع." },
+      ],
+      leadershipHeading: "القيادة",
+      leadershipBody: "[بيانات العميل مطلوبة] — قائمة القيادة التنفيذية والسير الذاتية.",
+      factsHeading: "نظرة سريعة",
+      facts: [
+        { label: "التأسيس", value: "[بيانات العميل مطلوبة]" },
+        { label: "المقر الرئيسي", value: "[بيانات العميل مطلوبة]" },
+        { label: "مراكز التنفيذ", value: "[بيانات العميل مطلوبة]" },
+        { label: "حجم الفريق", value: "[بيانات العميل مطلوبة]" },
+      ],
+    },
 };
+
 
 export const strings: Record<Lang, Strings> = { en, ar };
 
