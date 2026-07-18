@@ -54,6 +54,7 @@ export function HomeHero() {
           // machinery sit — puts the subject next to the text column instead
           // of showing empty ceiling above it.
           className="absolute inset-0 -z-10 h-full w-full object-cover [object-position:70%_65%]"
+          data-hero-img
         />
       </picture>
 
