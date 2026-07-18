@@ -64,9 +64,13 @@ export function HomeHero() {
         aria-hidden="true"
         className="absolute inset-0 -z-10"
         style={{
+          // `to right` is the widely-supported physical direction. Text sits
+          // in the start column (left in LTR / right in RTL); the RTL case
+          // gets a mirrored gradient via the sibling rule below.
           background:
-            "linear-gradient(to inline-end, rgba(20,24,28,0.86) 0%, rgba(20,24,28,0.72) 45%, rgba(20,24,28,0.32) 100%)",
+            "linear-gradient(to right, rgba(20,24,28,0.86) 0%, rgba(20,24,28,0.72) 45%, rgba(20,24,28,0.32) 100%)",
         }}
+        data-scrim="directional"
       />
       {/* Second, vertical scrim only at the base — smooths the transition
           into the next section without stacking a full-frame darkener. */}
