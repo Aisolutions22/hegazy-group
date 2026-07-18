@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import hegazyMark from "@/assets/hegazy-mark.png";
+import hegazyLogo from "@/assets/hegazy-logo.png";
 // Search icon removed — see comment on the end-actions block below.
 import { Button } from "@/components/ui/button";
 import { UtilityBar } from "./utility-bar";
@@ -41,27 +41,20 @@ export function SiteHeader({ variant = "solid" }: Props) {
           collapsed ? "h-14" : "h-20"
         )}
       >
-        {/* Logo */}
-        <Link to="/" className="inline-flex items-center gap-2" aria-label="Hegazy Group — Home">
+        {/* Logo — full uploaded lockup (mark + wordmark). Rendered uncropped
+            via object-contain at a fixed header height with auto width so the
+            image's natural aspect ratio is preserved. No zoom, no focal
+            adjustment. The image already contains the "Hegazy Group"
+            wordmark, so no adjacent text span is rendered. */}
+        <Link to="/" className="inline-flex items-center" aria-label="Hegazy Group — Home">
           <img
-            src={hegazyMark}
-            alt=""
-            aria-hidden="true"
-            width={32}
-            height={32}
+            src={hegazyLogo}
+            alt="Hegazy Group"
             className={cn(
-              "h-8 w-8 shrink-0 object-contain",
+              "h-10 w-auto object-contain",
               isTransparent && "brightness-0 invert"
             )}
           />
-          <span
-            className={cn(
-              "text-lg font-semibold tracking-tight",
-              isTransparent ? "text-white" : "text-graphite-900"
-            )}
-          >
-            Hegazy Group
-          </span>
         </Link>
 
         {/* Center nav — same mega-menu component in both header states,
