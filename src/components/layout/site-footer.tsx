@@ -111,7 +111,7 @@ export function SiteFooter() {
             ))}
           </div>
         </div>
-      </div>
+      </Section>
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
