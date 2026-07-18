@@ -60,12 +60,14 @@ export function SiteFooter() {
 
         {/* Brand + tagline */}
         <div className="mb-12 max-w-2xl">
-          <div className="inline-flex items-center">
+          <div className="inline-flex items-center gap-3">
             <img
               src={hegazyLogo}
-              alt="Hegazy Group"
+              alt=""
+              aria-hidden="true"
               className="h-12 w-auto object-contain brightness-0 invert"
             />
+            <span className="font-semibold tracking-tight text-body text-white">Hegazy Group</span>
           </div>
           <p className="mt-4 text-meta leading-relaxed text-white/70">{t.footer.tagline}</p>
         </div>
