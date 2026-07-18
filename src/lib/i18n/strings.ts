@@ -173,6 +173,35 @@ const en = {
       inStock: "In stock",
       onRequest: "On request",
     },
+    industriesPage: {
+      eyebrow: "Industries",
+      title: "Aluminum supply for demanding industries.",
+      lead: "We supply contractors, fabricators, and OEMs across four core sectors — each with its own alloy, temper, and finish requirements.",
+      applications: "Typical applications",
+      commonForms: "Common forms",
+      commonAlloys: "Common alloys",
+      viewIndustry: "View sector detail",
+      construction: {
+        applications: ["Curtain wall and unitized facades", "Cladding and rainscreen", "Structural framing profiles", "Window and door systems"],
+        forms: ["Extruded profiles", "Sheets and plates", "Coated coils"],
+        alloys: ["6060", "6063", "6082", "5005"],
+      },
+      manufacturing: {
+        applications: ["OEM sheet metal fabrication", "Machined components", "Enclosures and housings", "Industrial equipment frames"],
+        forms: ["Sheets and plates", "Coils", "Bars and rods"],
+        alloys: ["1050", "5754", "6061", "6082"],
+      },
+      marine: {
+        applications: ["Shipyard hull plating", "Superstructure profiles", "Offshore platform components", "Marine-grade weldments"],
+        forms: ["Marine plate", "Extruded profiles", "Bars"],
+        alloys: ["5083", "5086", "6082"],
+      },
+      automotive: {
+        applications: ["Lightweighting body panels", "Chassis components", "Rail and transit interiors", "Heat exchangers"],
+        forms: ["Sheets", "Coils", "Extruded profiles"],
+        alloys: ["5182", "6014", "6061", "6082"],
+      },
+    },
     productDetail: {
       backToCatalog: "Back to catalog",
       overview: "Overview",
