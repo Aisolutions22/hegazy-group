@@ -35,7 +35,9 @@
   --danger-600: #B4232C;
 
   /* Section padding (fluid) */
-  --section-py: clamp(48px, 8vw, 96px);
+  /* Section vertical rhythm — exact per spec: 48px mobile, 96px desktop.
+     Every section (hero, footer, content) consumes this token via <Section />. */
+  --section-py: 48px;
 
   /* 12-col grid */
   --grid-columns: 12;
