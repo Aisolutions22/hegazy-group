@@ -226,6 +226,19 @@ const en = {
       related: "Related products",
       requestQuoteFor: "Request a quote for this product",
     },
+    projectsPage: {
+      eyebrow: "Projects",
+      title: "Selected projects supplied by Hegazy Group.",
+      lead: "A reference of representative projects across construction, industrial manufacturing, marine, and transport. Client names and figures are shown once approved for release.",
+      filterAll: "All sectors",
+      role: "Role",
+      roleValue: "Aluminum supply",
+      sector: "Sector",
+      year: "Year",
+      location: "Location",
+      scope: "Scope supplied",
+      placeholder: "[CLIENT-INPUT-REQUIRED]",
+    },
 };
 
 
@@ -431,6 +444,19 @@ const ar: Strings = {
         forms: ["ألواح", "لفائف", "قطاعات مسحوبة"],
         alloys: ["5182", "6014", "6061", "6082"],
       },
+    },
+    projectsPage: {
+      eyebrow: "المشاريع",
+      title: "مشاريع مختارة وردتها مجموعة حجازي.",
+      lead: "مرجع لمشاريع تمثيلية عبر البناء والتصنيع الصناعي والقطاع البحري والنقل. تُعرض أسماء العملاء والأرقام عند اعتمادها.",
+      filterAll: "جميع القطاعات",
+      role: "الدور",
+      roleValue: "توريد الألومنيوم",
+      sector: "القطاع",
+      year: "السنة",
+      location: "الموقع",
+      scope: "نطاق التوريد",
+      placeholder: "[بيانات العميل مطلوبة]",
     },
     productDetail: {
       backToCatalog: "العودة إلى الكتالوج",
