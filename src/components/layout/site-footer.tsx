@@ -55,7 +55,8 @@ export function SiteFooter() {
 
   return (
     <footer className="bg-graphite-900 text-white">
-      <div className="mx-auto w-full max-w-[1280px] px-6 py-16 md:px-8 md:py-20">
+      <Section as="div">
+
         {/* Brand + tagline */}
         <div className="mb-12 max-w-2xl">
           <div className="inline-flex items-center gap-2">
