@@ -21,19 +21,57 @@ export const Route = createFileRoute("/products/$category/$product")({
     ).slice(0, 3);
     return { product, related };
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData, params }) => {
     if (!loaderData) {
       return { meta: [{ title: "Product not found — Hegazy Group" }, { name: "robots", content: "noindex" }] };
     }
     const { product } = loaderData;
     const title = `${product.name} — ${product.categoryLabel} | Hegazy Group`;
     const desc = `${product.name} (${product.code}) — Alloy ${product.alloy}, temper ${product.temper}, ${product.finish.toLowerCase()} finish. Stocked aluminum ${product.form.toLowerCase()}.`;
+    const url = `https://hegazy-group.lovable.app/products/${params.category}/${params.product}`;
     return {
       meta: [
         { title },
         { name: "description", content: desc },
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "product" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: desc },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: product.name,
+            sku: product.code,
+            category: product.categoryLabel,
+            description: desc,
+            url,
+            brand: { "@type": "Organization", name: "Hegazy Group" },
+            material: `Aluminum ${product.alloy}`,
+            additionalProperty: [
+              { "@type": "PropertyValue", name: "Alloy", value: product.alloy },
+              { "@type": "PropertyValue", name: "Temper", value: product.temper },
+              { "@type": "PropertyValue", name: "Form", value: product.form },
+              { "@type": "PropertyValue", name: "Finish", value: product.finish },
+            ],
+            offers: {
+              "@type": "Offer",
+              availability:
+                product.availability === "in-stock"
+                  ? "https://schema.org/InStock"
+                  : "https://schema.org/PreOrder",
+              priceCurrency: "USD",
+              price: "0",
+              url: `https://hegazy-group.lovable.app/quote`,
+            },
+          }),
+        },
       ],
     };
   },
