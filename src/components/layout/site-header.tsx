@@ -38,7 +38,7 @@ export function SiteHeader({ variant = "solid" }: Props) {
 
       <div
         className={cn(
-          "mx-auto flex w-full max-w-[1280px] items-center gap-6 px-6 transition-all duration-200 md:px-8",
+          "mx-auto flex w-full max-w-[1280px] items-center gap-6 px-6 transition-[height] duration-200 ease-out md:px-8",
           collapsed ? "h-14" : "h-20"
         )}
       >
