@@ -1,22 +1,41 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { ArrowRight } from "lucide-react";
-import heroImg from "@/assets/hero-warehouse.jpg";
+import heroJpg from "@/assets/hero-warehouse.jpg";
+import heroWebp1280 from "@/assets/hero-warehouse-1280.webp";
+import heroWebp1920 from "@/assets/hero-warehouse-1920.webp";
+import heroAvif1280 from "@/assets/hero-warehouse-1280.avif";
+import heroAvif1920 from "@/assets/hero-warehouse-1920.avif";
 import { Section } from "@/components/layout/section";
 
 export function HomeHero() {
   const { t } = useLanguage();
   return (
     <section className="relative isolate -mt-[calc(2.5rem+5rem)] flex min-h-[720px] w-full items-end overflow-hidden bg-graphite-900 text-white lg:min-h-[820px]">
-      <img
-        src={heroImg}
-        alt=""
-        width={1920}
-        height={1080}
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 -z-10 h-full w-full object-cover"
-      />
+      {/* LCP image — AVIF/WebP-first with a JPEG fallback, responsive srcset,
+          and a matching preload declared on the "/" route head(). */}
+      <picture>
+        <source
+          type="image/avif"
+          srcSet={`${heroAvif1280} 1280w, ${heroAvif1920} 1920w`}
+          sizes="100vw"
+        />
+        <source
+          type="image/webp"
+          srcSet={`${heroWebp1280} 1280w, ${heroWebp1920} 1920w`}
+          sizes="100vw"
+        />
+        <img
+          src={heroJpg}
+          alt="Aluminum sheets, coils, and profiles stacked in a bonded distribution warehouse."
+          width={1920}
+          height={1080}
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+        />
+      </picture>
+
       {/* Single scrim — one gradient from opaque graphite at the base to a
           near-transparent scrim at the top. No stacked image-opacity darkening. */}
       <div
@@ -69,3 +88,7 @@ export function HomeHero() {
     </section>
   );
 }
+
+// Re-export the AVIF 1920 asset URL so the "/" route head() can preload the
+// same variant the browser will pick at desktop breakpoints.
+export { heroAvif1920 as heroLcpPreloadHref };

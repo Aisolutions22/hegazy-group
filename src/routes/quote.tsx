@@ -284,6 +284,15 @@ function QuotePage() {
                       </Button>
                     )}
                   </div>
+
+                  {status === "error" && submitError && (
+                    <p
+                      role="alert"
+                      className="mt-4 rounded-md border border-danger-600/40 bg-danger-600/5 p-4 text-meta text-danger-600"
+                    >
+                      {submitError}
+                    </p>
+                  )}
                 </>
               )}
             </div>

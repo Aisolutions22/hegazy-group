@@ -96,8 +96,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Hegazy Group — Aluminum Supply & Distribution" },
       { name: "twitter:description", content: "Hegazy Group is a specialist distributor of aluminum profiles, sheets, coils, and bars — sourced from qualified mills and delivered on schedule." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/KtqGVkh2ZOQmeKb7IKlh7rKzoS92/social-images/social-1784301825691-H_Bolt_1.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/KtqGVkh2ZOQmeKb7IKlh7rKzoS92/social-images/social-1784301825691-H_Bolt_1.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
