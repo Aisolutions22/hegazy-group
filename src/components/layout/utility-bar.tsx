@@ -36,6 +36,7 @@ export function UtilityBar() {
           </a>
           <a
             href="#locations"
+            aria-label={t.locations}
             className="hidden items-center gap-2 text-white/85 hover:text-white md:inline-flex"
           >
             <MapPin className="h-3.5 w-3.5" aria-hidden="true" />

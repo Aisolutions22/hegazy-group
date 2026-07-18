@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Section, Grid } from "@/components/layout/section";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { FinalCta } from "@/components/home/final-cta";
 import { MobileStickyQuoteBar } from "@/components/layout/mobile-nav";
 import { useLanguage } from "@/lib/i18n/language-context";
@@ -40,6 +41,7 @@ function ResourcesPage() {
     <>
       <SiteHeader variant="solid" />
       <main id="main-content">
+        <Breadcrumbs items={[{ label: t.nav.resources }]} />
         <Section
           as="header"
           className="bg-graphite-900 text-white"

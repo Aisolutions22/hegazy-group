@@ -3,6 +3,7 @@ import type { ProductSummary } from "@/lib/catalog/products";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Section, Grid } from "@/components/layout/section";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { MobileStickyQuoteBar } from "@/components/layout/mobile-nav";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { PRODUCTS } from "@/lib/catalog/products";
@@ -55,6 +56,12 @@ function CategoryPage() {
     <>
       <SiteHeader variant="solid" />
       <main id="main-content">
+        <Breadcrumbs
+          items={[
+            { label: t.nav.products, href: "/products" },
+            { label: categoryLabel },
+          ]}
+        />
         <Section
           as="header"
           className="bg-graphite-900 text-white"
