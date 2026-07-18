@@ -70,6 +70,7 @@ function ProjectsPage() {
     <>
       <SiteHeader variant="solid" />
       <main id="main-content">
+        <Breadcrumbs items={[{ label: t.nav.projects }]} />
         {/* Hero */}
         <Section
           as="header"
