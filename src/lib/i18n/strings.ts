@@ -374,6 +374,30 @@ const ar: Strings = {
       inStock: "متوفر",
       onRequest: "عند الطلب",
     },
+    productDetail: {
+      backToCatalog: "العودة إلى الكتالوج",
+      overview: "نظرة عامة",
+      overviewBody: "[بيانات العميل مطلوبة] — وصف المنتج وتطبيقاته الشائعة وملاحظات التصنيع التالي.",
+      specTable: "المواصفات الفنية",
+      spec: {
+        alloy: "السبيكة",
+        temper: "الصلابة",
+        form: "الشكل",
+        finish: "التشطيب",
+        standard: "المعيار",
+        thickness: "السماكة",
+        width: "العرض",
+        length: "الطول",
+        tolerance: "التفاوت",
+      },
+      standardsNote: "المعايير والتفاوتات للاسترشاد — تُؤكّد عند إصدار العرض.",
+      datasheet: "ورقة البيانات",
+      datasheetBody: "حمّل ورقة البيانات الفنية الكاملة مع الأبعاد والخواص الميكانيكية والتشطيبات المتاحة.",
+      downloadPdf: "تحميل PDF",
+      requestSample: "طلب عيّنة",
+      related: "منتجات ذات صلة",
+      requestQuoteFor: "اطلب عرض سعر لهذا المنتج",
+    },
 };
 
 
