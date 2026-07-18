@@ -226,6 +226,19 @@ const en = {
       related: "Related products",
       requestQuoteFor: "Request a quote for this product",
     },
+    projectsPage: {
+      eyebrow: "Projects",
+      title: "Selected projects supplied by Hegazy Group.",
+      lead: "A reference of representative projects across construction, industrial manufacturing, marine, and transport. Client names and figures are shown once approved for release.",
+      filterAll: "All sectors",
+      role: "Role",
+      roleValue: "Aluminum supply",
+      sector: "Sector",
+      year: "Year",
+      location: "Location",
+      scope: "Scope supplied",
+      placeholder: "[CLIENT-INPUT-REQUIRED]",
+    },
 };
 
 
