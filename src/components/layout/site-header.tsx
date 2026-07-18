@@ -16,13 +16,11 @@ export function SiteHeader({ variant = "solid" }: Props) {
   const { t } = useLanguage();
   const scroll = useScrollDirection();
 
-  // Transparent header only while the page is genuinely at the top.
   const isTransparent = variant === "transparent" && scroll.atTop;
   // Compress the main bar only when scrolling down AND past the top.
   const collapsed = !scroll.atTop && scroll.direction === "down";
-  // Utility bar is visible at top OR whenever the user is scrolling up.
-  // It hides only while scrolling down away from the top.
-  const utilityHidden = collapsed;
+
+
 
   return (
     <header
@@ -33,7 +31,7 @@ export function SiteHeader({ variant = "solid" }: Props) {
           : "border-b border-steel-200 bg-white/95 text-graphite-900 backdrop-blur"
       )}
     >
-      <UtilityBar hidden={utilityHidden} />
+      <UtilityBar />
 
 
       <div
