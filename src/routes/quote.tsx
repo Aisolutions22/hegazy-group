@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Section, Grid } from "@/components/layout/section";
@@ -8,6 +9,7 @@ import { useLanguage } from "@/lib/i18n/language-context";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { submitRfq } from "@/lib/rfq/submit.functions";
 
 export const Route = createFileRoute("/quote")({
   head: () => ({
@@ -91,24 +93,22 @@ const FORM_OPTIONS = ["Profile", "Sheet", "Plate", "Coil", "Foil", "Bar", "Rod"]
 const UNIT_OPTIONS: Unit[] = ["kg", "tonnes", "meters", "pieces"];
 const TIMELINE_OPTIONS: Timeline[] = ["urgent", "month", "quarter", "planning"];
 
-function generateRef(): string {
-  const d = new Date();
-  const ymd = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
-  const suffix = Math.floor(1000 + Math.random() * 9000);
-  return `RFQ-${ymd}-${suffix}`;
-}
+// Reference IDs are minted by the server function so the value we display
+// matches the row persisted in the database.
 
 // -----------------------------------------------------------------------------
 // Page
 // -----------------------------------------------------------------------------
 
 function QuotePage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const submit$ = useServerFn(submitRfq);
   const [step, setStep] = useState<0 | 1 | 2 | 3>(0);
   const [data, setData] = useState<RfqData>(INITIAL);
   const [errors, setErrors] = useState<Partial<Record<keyof RfqData, string>>>({});
-  const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [refId, setRefId] = useState<string>("");
+  const [submitError, setSubmitError] = useState<string>("");
 
   const stepLabels = [
     t.quotePage.steps.spec,
@@ -152,17 +152,46 @@ function QuotePage() {
     setStep((s) => (Math.max(0, s - 1) as 0 | 1 | 2 | 3));
   }
 
-  function submit() {
+  async function submit() {
     if (!validateStep(3)) return;
     setStatus("submitting");
-    const ref = generateRef();
-    // Placeholder submission — logs the payload. Wire to server fn / CRM later.
-    // eslint-disable-next-line no-console
-    console.info("[RFQ] submission", { ref, ...data });
-    window.setTimeout(() => {
-      setRefId(ref);
+    setSubmitError("");
+    try {
+      const result = await submit$({
+        data: {
+          category: data.category,
+          product: data.product || undefined,
+          form: data.form || undefined,
+          alloy: data.alloy,
+          temper: data.temper || undefined,
+          finish: data.finish || undefined,
+          dimensions: data.dimensions || undefined,
+          quantity: Number(data.quantity),
+          unit: data.unit,
+          useCase: data.useCase || undefined,
+          timeline: data.timeline as Exclude<typeof data.timeline, "">,
+          destination: data.destination || undefined,
+          name: data.name,
+          company: data.company,
+          role: data.role || undefined,
+          email: data.email,
+          phone: data.phone || undefined,
+          country: data.country || undefined,
+          consent: true,
+          locale: lang,
+        },
+      });
+      setRefId(result.reference);
       setStatus("success");
-    }, 700);
+    } catch (err) {
+      // Never log the payload — it contains user PII.
+      const message =
+        err instanceof Error && err.message
+          ? err.message
+          : t.quotePage.submitError;
+      setSubmitError(message);
+      setStatus("error");
+    }
   }
 
   function reset() {
@@ -171,6 +200,7 @@ function QuotePage() {
     setStep(0);
     setRefId("");
     setStatus("idle");
+    setSubmitError("");
   }
 
   return (
@@ -254,6 +284,15 @@ function QuotePage() {
                       </Button>
                     )}
                   </div>
+
+                  {status === "error" && submitError && (
+                    <p
+                      role="alert"
+                      className="mt-4 rounded-md border border-danger-600/40 bg-danger-600/5 p-4 text-meta text-danger-600"
+                    >
+                      {submitError}
+                    </p>
+                  )}
                 </>
               )}
             </div>

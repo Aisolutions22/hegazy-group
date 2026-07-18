@@ -328,6 +328,7 @@ const en = {
       submitting: "Submitting…",
       required: "This field is required",
       invalidEmail: "Please enter a valid email address",
+      submitError: "We couldn't send your request. Please try again in a moment.",
       // Success
       successTitle: "Request received",
       successBody: "Thank you. Our team will review your specifications and respond within one business day.",
@@ -672,6 +673,7 @@ const ar: Strings = {
       submitting: "جارٍ الإرسال…",
       required: "هذا الحقل مطلوب",
       invalidEmail: "يرجى إدخال بريد إلكتروني صالح",
+      submitError: "تعذّر إرسال طلبك. يرجى المحاولة مرة أخرى بعد لحظات.",
       successTitle: "تم استلام الطلب",
       successBody: "شكراً لك. سيراجع فريقنا مواصفاتك ويرد خلال يوم عمل واحد.",
       successRef: "رقمك المرجعي",
