@@ -173,6 +173,30 @@ const en = {
       inStock: "In stock",
       onRequest: "On request",
     },
+    productDetail: {
+      backToCatalog: "Back to catalog",
+      overview: "Overview",
+      overviewBody: "[CLIENT-INPUT-REQUIRED] — Product description, typical applications, and downstream processing notes.",
+      specTable: "Technical specifications",
+      spec: {
+        alloy: "Alloy",
+        temper: "Temper",
+        form: "Form",
+        finish: "Finish",
+        standard: "Standard",
+        thickness: "Thickness",
+        width: "Width",
+        length: "Length",
+        tolerance: "Tolerance",
+      },
+      standardsNote: "Standards and tolerances reference — confirm on quotation.",
+      datasheet: "Datasheet",
+      datasheetBody: "Download the full technical datasheet with dimensions, mechanical properties, and available finishes.",
+      downloadPdf: "Download PDF",
+      requestSample: "Request a sample",
+      related: "Related products",
+      requestQuoteFor: "Request a quote for this product",
+    },
 };
 
 
