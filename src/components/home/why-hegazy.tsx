@@ -1,4 +1,4 @@
-import { Section } from "@/components/layout/section";
+import { Section, Grid } from "@/components/layout/section";
 import { useLanguage } from "@/lib/i18n/language-context";
 
 export function WhyHegazy() {
@@ -6,7 +6,7 @@ export function WhyHegazy() {
   return (
     <Section aria-label={t.why.heading}>
       <div className="mb-12 max-w-2xl">
-        <div className="mb-3 font-mono text-micro uppercase tracking-widest text-steel-400">
+        <div className="mb-3 font-mono text-micro uppercase tracking-caps text-steel-400">
           {t.why.heading}
         </div>
         <h2 className="text-3xl leading-tight">
@@ -14,9 +14,12 @@ export function WhyHegazy() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <Grid>
         {t.why.items.map((item, i) => (
-          <div key={item.title} className="border-t border-graphite-900 pt-6">
+          <div
+            key={item.title}
+            className="col-span-4 border-t border-graphite-900 pt-6 sm:col-span-4 lg:col-span-3"
+          >
             <div className="text-caption text-steel-400" data-spec>
               0{i + 1}
             </div>
@@ -24,7 +27,7 @@ export function WhyHegazy() {
             <p className="mt-3 text-meta leading-relaxed text-steel-600">{item.body}</p>
           </div>
         ))}
-      </div>
+      </Grid>
     </Section>
   );
 }

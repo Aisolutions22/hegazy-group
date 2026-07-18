@@ -38,7 +38,7 @@ export function HomeHero() {
         }}
       >
         <div className="max-w-3xl">
-          <div className="mb-6 inline-flex items-center gap-3 font-mono text-caption uppercase tracking-[0.2em] text-white/70">
+          <div className="mb-6 inline-flex items-center gap-3 font-mono text-caption uppercase tracking-caps text-white/70">
             <span className="inline-block h-px w-8 bg-white/40" aria-hidden="true" />
             {t.hero.eyebrow}
           </div>
