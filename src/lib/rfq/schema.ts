@@ -24,7 +24,7 @@ export const rfqSchema = z.object({
 
   // Project
   quantity: z.coerce
-    .number({ invalid_type_error: "Enter a number" })
+    .number()
     .positive({ message: "Must be greater than zero" })
     .lt(1e9, { message: "Value is too large" }),
   unit: z.enum(["kg", "tonnes", "meters", "pieces"]),
@@ -41,9 +41,7 @@ export const rfqSchema = z.object({
   country: optionalCapped(80),
 
   // Consent
-  consent: z.literal(true, {
-    errorMap: () => ({ message: "Consent is required" }),
-  }),
+  consent: z.literal(true, { message: "Consent is required" }),
 
   // Context (client-supplied, server-recorded)
   locale: z.enum(["en", "ar"]).optional(),
