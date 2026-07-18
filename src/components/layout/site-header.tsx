@@ -16,8 +16,10 @@ export function SiteHeader({ variant = "solid" }: Props) {
   const { t } = useLanguage();
   const scroll = useScrollDirection();
 
+  const isTransparent = variant === "transparent" && scroll.atTop;
   // Compress the main bar only when scrolling down AND past the top.
   const collapsed = !scroll.atTop && scroll.direction === "down";
+
 
 
   return (
