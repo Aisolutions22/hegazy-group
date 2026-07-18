@@ -34,6 +34,10 @@
   --warning-600: #B9740B;
   --danger-600: #B4232C;
 
+  /* Overlay scrim — single canonical hero/media scrim.
+     Use as a solid overlay OR as one stop of a single gradient — never stack. */
+  --color-overlay-scrim: rgba(20, 24, 28, 0.72);
+
   /* Section padding (fluid) */
   /* Section vertical rhythm — exact per spec: 48px mobile, 96px desktop.
      Every section (hero, footer, content) consumes this token via <Section />. */
