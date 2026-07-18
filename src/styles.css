@@ -289,3 +289,17 @@
   }
 }
 
+/* ============================================================
+ * Utility tokens (Tailwind arbitrary-value replacements)
+ * ============================================================ */
+@utility tracking-caps {
+  letter-spacing: var(--tracking-caps);
+}
+@utility card-industry {
+  min-height: var(--card-min-industry);
+}
+@utility card-product {
+  min-height: var(--card-min-product);
+}
+
+
