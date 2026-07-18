@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Search } from "lucide-react";
+// Search icon removed — see comment on the end-actions block below.
 import { Button } from "@/components/ui/button";
 import { UtilityBar } from "./utility-bar";
 import { MegaMenu } from "./mega-menu";
