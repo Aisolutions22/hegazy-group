@@ -128,13 +128,77 @@ export function MobileNav() {
   );
 }
 
-export function MobileStickyQuoteBar() {
+/**
+ * Sticky mobile CTA bar, pinned to the bottom of the viewport below `lg`.
+ *
+ * Variants:
+ *  - "primary"  — full "Request a Quote" button. Use on Product Detail /
+ *                 Category / Industries / About / generic content pages.
+ *  - "contact"  — lighter phone + WhatsApp icons. Use on pages whose main
+ *                 content already IS the conversion action (RFQ / contact
+ *                 form) to avoid two stacked competing CTAs.
+ *
+ * Renders its own spacer so page content is never obscured, and pads for
+ * env(safe-area-inset-bottom) to clear the iOS home indicator.
+ */
+export function MobileStickyQuoteBar({
+  variant = "primary",
+}: {
+  variant?: "primary" | "contact";
+}) {
   const { t } = useLanguage();
+
   return (
-    <div className="fixed inset-inline-0 bottom-0 z-40 border-t border-steel-200 bg-white/95 p-3 backdrop-blur lg:hidden">
-      <Button asChild size="lg" className="w-full">
-        <a href="/quote">{t.requestQuote}</a>
-      </Button>
-    </div>
+    <>
+      {/* Spacer — reserves the exact height of the bar so nothing sits under it. */}
+      <div
+        aria-hidden="true"
+        className="lg:hidden"
+        style={{
+          height: "calc(var(--mobile-cta-height) + env(safe-area-inset-bottom))",
+        }}
+      />
+      <div
+        className="fixed inset-inline-0 bottom-0 z-40 border-t border-steel-200 bg-white/95 backdrop-blur lg:hidden"
+        style={{
+          paddingBlockStart: "12px",
+          paddingBlockEnd: "calc(12px + env(safe-area-inset-bottom))",
+          paddingInline: "16px",
+        }}
+      >
+        {variant === "primary" ? (
+          <Button asChild size="lg" className="w-full">
+            <a href="/quote">{t.requestQuote}</a>
+          </Button>
+        ) : (
+          <div className="flex items-stretch gap-2">
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="flex-1 border-steel-200"
+            >
+              <a
+                href="tel:+000000000"
+                className="inline-flex items-center justify-center gap-2"
+              >
+                <Phone className="h-4 w-4" aria-hidden="true" />
+                {t.phone}
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="flex-1 border-steel-200">
+              <a
+                href="https://wa.me/000000000"
+                className="inline-flex items-center justify-center gap-2"
+              >
+                <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                {t.whatsapp}
+              </a>
+            </Button>
+          </div>
+        )}
+      </div>
+    </>
   );
 }
+
