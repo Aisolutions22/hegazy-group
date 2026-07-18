@@ -50,6 +50,14 @@
   --grid-gutter: clamp(16px, 2vw, 24px);
   --grid-max: 1280px;
 
+  /* Letter-spacing tokens — caps eyebrows use the wide industrial track. */
+  --tracking-caps: 0.2em;
+
+  /* Card minimum heights — keep home category cards on a consistent baseline
+     without one-off arbitrary Tailwind values. */
+  --card-min-industry: 220px;
+  --card-min-product: 280px;
+
   /* shadcn semantic aliases → brand values */
   --radius: 0.5rem;
   --background: var(--offwhite-50);
