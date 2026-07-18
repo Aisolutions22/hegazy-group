@@ -1,18 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageStub } from "@/components/layout/page-stub";
-import { useLanguage } from "@/lib/i18n/language-context";
+import { stubRouteOptions } from "@/lib/routes/stub-route";
 
-export const Route = createFileRoute("/careers")({
-  head: () => ({
-    meta: [
-      { title: "Careers — Hegazy Group" },
-      { name: "description", content: "Careers at Hegazy Group." },
-    ],
+export const Route = createFileRoute("/careers")(
+  stubRouteOptions({
+    metaTitle: "Careers — Hegazy Group",
+    metaDescription: "Careers at Hegazy Group.",
+    copy: (t) => ({
+      eyebrow: t.footer.company.careers,
+      title: t.footer.company.careers,
+    }),
   }),
-  component: CareersPage,
-});
-
-function CareersPage() {
-  const { t } = useLanguage();
-  return <PageStub eyebrow={t.footer.company.careers} title={t.footer.company.careers} />;
-}
+);

@@ -1,19 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageStub } from "@/components/layout/page-stub";
-import { useLanguage } from "@/lib/i18n/language-context";
+import { stubRouteOptions } from "@/lib/routes/stub-route";
 
-export const Route = createFileRoute("/cookies")({
-  head: () => ({
-    meta: [
-      { title: "Cookies — Hegazy Group" },
-      { name: "description", content: "Cookie policy." },
-      { name: "robots", content: "noindex" },
-    ],
+export const Route = createFileRoute("/cookies")(
+  stubRouteOptions({
+    metaTitle: "Cookies — Hegazy Group",
+    metaDescription: "Cookie policy.",
+    noindex: true,
+    copy: (t) => ({
+      eyebrow: t.footer.legal.cookies,
+      title: t.footer.legal.cookies,
+    }),
   }),
-  component: CookiesPage,
-});
-
-function CookiesPage() {
-  const { t } = useLanguage();
-  return <PageStub eyebrow={t.footer.legal.cookies} title={t.footer.legal.cookies} />;
-}
+);

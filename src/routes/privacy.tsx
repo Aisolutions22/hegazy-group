@@ -1,19 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageStub } from "@/components/layout/page-stub";
-import { useLanguage } from "@/lib/i18n/language-context";
+import { stubRouteOptions } from "@/lib/routes/stub-route";
 
-export const Route = createFileRoute("/privacy")({
-  head: () => ({
-    meta: [
-      { title: "Privacy — Hegazy Group" },
-      { name: "description", content: "Privacy policy." },
-      { name: "robots", content: "noindex" },
-    ],
+export const Route = createFileRoute("/privacy")(
+  stubRouteOptions({
+    metaTitle: "Privacy — Hegazy Group",
+    metaDescription: "Privacy policy.",
+    noindex: true,
+    copy: (t) => ({
+      eyebrow: t.footer.legal.privacy,
+      title: t.footer.legal.privacy,
+    }),
   }),
-  component: PrivacyPage,
-});
-
-function PrivacyPage() {
-  const { t } = useLanguage();
-  return <PageStub eyebrow={t.footer.legal.privacy} title={t.footer.legal.privacy} />;
-}
+);
